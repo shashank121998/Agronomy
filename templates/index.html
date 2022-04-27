@@ -1,0 +1,157 @@
+{% extends 'layout.html' %}
+{% block body %}
+<!-- banner -->
+<style>
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+</style>
+<section class = "banner_w3lspvt" id = "home">
+	<div class = "csslider infinity" id = "slider1">
+		<div class = "banner-top">
+			<div class = "overlay">
+				<div class = "container">
+					<div class = "w3layouts-banner-info text-center">
+						<br><br>
+						<h3 class = "text-wh" style="font-family: 'Philosopher', sans-serif; animation: 2s anim-lineUp ease-out; text-shadow: 4px 4px 8px #000000;">WELCOME</h3>
+						<h4 class = "text-wh mx-auto my-4" style="animation: 4s anim-lineUp ease-out;"><b>Got doubts regarding your farming strategies?<br>Worry not!</b></h4>
+						<br>
+						<h4 class = "text-wh mx-auto my-4"  style="animation: 6s anim-lineUp ease-out;"><strong>We are here to give you a helping hand</strong></h4>
+						<p class = "text-li mx-auto mt-2" style="animation: 6s anim-lineUp ease-out;">
+							1. Select suitable crop according to your soil<br>
+                            2. Pick out the best fertilizer for your crop<br>
+                            3. Analyze your crop's health</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //banner -->
+
+<!-- core values -->
+<section class = "core-value py-5 banner-top7" >
+	<div class = "container py-md-4"  style="font-family: 'Philosopher', sans-serif;">
+		<h2 class = "heading mb-sm-5 mb-4 text-center" style="text-shadow: 2px 2px 4px #474141;font-size: 3rem;"> ABOUT US</h2>
+		
+			<div style="margin: 0 5%; padding: 2% 5%; text-align: center;background: rgba(255,255,255,0.7);">
+				<h3 class="mt-4">Improving Agriculture, Improving Lives, Cultivating Crops To Make Farmers Increase
+					Profit.</h3>
+				<p class="mt-3" style="font-size: 20px; color: #323648;">
+				<strong>
+				    We use state-of-the-art machine learning and deep learning technologies to help you
+					guide through
+					the entire farming process. Make informed decisions to understand the demographics of your area,
+					understand the
+					factors that affect your crop and keep them healthy for a super awesome successful yield.
+				</strong>
+				</p>
+			</div>
+	</div>
+</section>
+<!-- //core values -->
+
+
+<!-- Products & Services -->
+<section class = "banner-top2">
+	<div class = "container py-md-5">
+		<h2 class = "heading mb-sm-5 mb-4 text-center" style="font-family: 'Philosopher', sans-serif; text-shadow: 2px 2px 4px #7e7575;font-size: 3rem;"> OUR SERVICES</h2>
+		<div class="row services">
+    		<div class="card mb-3" style="margin: 0.5% 10%;">
+		    <a href = "{{ url_for('crop_recommend') }}">
+              <div class="row no-gutters">
+                <div class="col-md-5">
+                  <img src="{{ url_for('static', filename = 'images/s3.jpg') }}" class="card-img" alt="...">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <span class="card-title card-font">CROP</span>
+                    <p class="card-text">Based on the NPK values provided, suggestions are made for the type of crops to be cultivated that are particularly well suited for the respective factors and conditions.</p>
+                  </div>
+                </div>
+              </div>
+              </a>
+            </div>
+            
+            
+            <div class="card mb-3" style="margin: 0.5% 10%;">
+            <a href = "{{ url_for('fertilizer_recommendation') }}">
+              <div class="row no-gutters">
+                 <div class="col-md-7">
+                      <div class="card-body">
+                        <span class="card-title card-font">FERTILIZER</span>
+                        <p class="card-text">Recommendation on the best type of fertiliser for the specified crop, given the soil's nutrient content values.</p>
+                      </div>
+                </div>
+                <div class="col-md-5">
+                  <img src="{{ url_for('static', filename = 'images/s2.jpg') }}" class="card-img" alt="...">
+                </div>
+              </div>
+            </a>
+            </div>
+            
+            
+            <div class="card mb-3" style="margin: 0.5% 10%;">
+            <a href = "{{ url_for('disease_prediction') }}">
+              <div class="row no-gutters">
+                <div class="col-md-5">
+                  <img src="{{ url_for('static', filename = 'images/s4.jpg') }}" class="card-img" alt="...">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <span class="card-title card-font">CROP DISEASE</span>
+                    <p class="card-text">When a crop's image is provided, estimating the name and causes of plant disease, as well as recommending various treatments.</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            </div>
+		</div>
+		
+	</div>
+</section>
+
+<!-- FAQs -->
+<section class = "banner-top8">
+	<div class = "container py-md-5">
+		<h2 class = "heading mb-sm-5 mb-4 text-center" style="font-family: 'Philosopher', sans-serif; text-shadow: 2px 2px 4px #7e7575;font-size: 3rem;">FAQs</h2>
+		<div style="margin: 0 5%; padding: 2% 5%; text-align: center;background: rgba(255,255,255,0.7);">
+				<h3 class="mt-4"><strong>Questions</strong></h3>
+				<p class="mt-3" style="font-size: 20px; text-align: left; color: #323648;">
+				<strong>
+          <br>
+          Q – 1: How to proceed with the website?<br>
+          Ans: A demo video is attached for your assistance. You can directly click the video tab and proceed further. Thank you.<br><br>
+          Q – 2: Can the resulted predictions be downloaded?<br>
+          Ans: Absolutely yes. After you land the predictions page, a "Download Report" button is given at the end using which the whole prediction can be downloaded in the form of a report.<br><br>
+          Q – 3: How to measure N-P-K values?<br>
+          Ans: Firstly, the farmers need to bring the soil samples of their field to the laboratory. Soil Testing Kits are available online which can be bought and directly used by soil testing technicians.<br><br>
+          Q – 4: What are the supported image file formats for disease prediction?<br>
+          Ans: You can upload the images in either of the supported file formats including “.jpg”, “.png”, “.jpeg”.<br><br>
+          Q – 5: What are the different language options available for the users?<br>
+          Ans: The application supports various Indian languages along with a variety of International dialects.<br><br>
+          Q – 6: Where can one contact for help and support?<br>
+          Ans: Hi user! You can drop your queries at the “agronomyportalsupport@gmail.com”. We will try our level best to solve your query as early as possible.<br>
+          
+				</strong>
+				</p>
+		</div>
+	</div>
+</section>
+
+</html>
+{% endblock %}
